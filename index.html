@@ -222,9 +222,12 @@
   <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.15fr_0.85fr] gap-14 items-center relative z-10">
 
     <div data-aos="fade-up">
-      <p class="font-mono text-xs tracking-[0.25em] uppercase text-brand-600 mb-5 flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-brand-500 pulse-dot"></span> Available for new campaigns
-      </p>
+      <div class="flex items-center gap-3 mb-5">
+        <img src="assets/profile.jpg" alt="Salam Basit Temidayo" loading="lazy" class="w-11 h-11 rounded-full object-cover ring-2 ring-brand-500/40 shadow-md" />
+        <p class="font-mono text-xs tracking-[0.25em] uppercase text-brand-600 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-brand-500 pulse-dot"></span> Available for new campaigns
+        </p>
+      </div>
       <h1 class="font-display font-bold leading-[1.05] text-4xl sm:text-5xl lg:text-6xl">
         Hi, I'm <span class="grad-text">Salam Basit</span>
       </h1>
@@ -237,7 +240,7 @@
 
       <div class="mt-9 flex flex-wrap gap-4">
         <a href="#contact" class="btn-primary text-white font-semibold px-7 py-3.5 rounded-full inline-flex items-center gap-2">
-          Hire Me <i class="fa-solid fa-arrow-right text-sm"></i>
+          Hire Me <i class="fa-solid fa-paper-plane text-sm"></i>
         </a>
         <a href="assets/Salam-Basit-Temidayo-CV.pdf" download class="btn-ghost card-surface font-semibold px-7 py-3.5 rounded-full inline-flex items-center gap-2 border border-line">
           <i class="fa-solid fa-download text-sm"></i> Download CV
@@ -320,9 +323,8 @@
   <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-center">
     <div data-aos="fade-right" class="relative mx-auto lg:mx-0">
       <div class="absolute -inset-4 bg-brand-500/10 rounded-[2.5rem] blur-2xl"></div>
-      <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-[2.5rem] card-surface flex items-center justify-center overflow-hidden shadow-xl">
-        <div class="absolute inset-0 grad-ring"></div>
-        <span class="font-display font-bold text-7xl sm:text-8xl grad-text relative">SB</span>
+      <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-[2.5rem] card-surface overflow-hidden shadow-xl">
+        <img src="assets/profile.jpg" alt="Salam Basit Temidayo" loading="lazy" class="w-full h-full object-cover" />
       </div>
       <div class="absolute -bottom-5 -right-5 glass rounded-2xl px-5 py-3 shadow-lg">
         <p class="font-display font-bold text-sm">Ibadan, Nigeria</p>
@@ -391,6 +393,10 @@
         <div class="flex justify-between text-sm font-medium mb-2"><span>CRM &amp; Lead Management</span><span class="text-mute font-mono">85%</span></div>
         <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
       </div>
+      <div>
+        <div class="flex justify-between text-sm font-medium mb-2"><span>Web Development <span class="text-mute font-normal">(Entry Level)</span></span><span class="text-mute font-mono">55%</span></div>
+        <div class="bar-track"><div class="bar-fill" data-width="55"></div></div>
+      </div>
     </div>
 
     <!-- category tabs -->
@@ -400,6 +406,7 @@
       <button class="tab-btn border border-line rounded-full px-5 py-2 text-sm font-medium" data-tab="marketing">Digital Marketing</button>
       <button class="tab-btn border border-line rounded-full px-5 py-2 text-sm font-medium" data-tab="design">Graphic Design</button>
       <button class="tab-btn border border-line rounded-full px-5 py-2 text-sm font-medium" data-tab="tools">Tools</button>
+      <button class="tab-btn border border-line rounded-full px-5 py-2 text-sm font-medium" data-tab="webdev">Web Development</button>
     </div>
 
     <div class="max-w-4xl mx-auto">
@@ -449,7 +456,17 @@
         <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Microsoft Office</span>
         <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">CRM Software</span>
       </div>
+      <div class="tab-panel hidden flex-wrap justify-center gap-3" data-panel="webdev">
+        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">HTML5</span>
+        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">CSS3 / Tailwind CSS</span>
+        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">JavaScript Basics</span>
+        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Front-End Development</span>
+        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Back-End Basics</span>
+        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Responsive Web Design</span>
+        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Git &amp; GitHub</span>
+      </div>
     </div>
+    <p class="text-center text-xs text-mute font-mono mt-6" data-aos="fade-up">Currently building on this as an entry-level web developer — HTML, front-end &amp; back-end fundamentals.</p>
   </div>
 </section>
 
@@ -569,8 +586,114 @@
   </div>
 </section>
 
+<!-- WORK IN ACTION GALLERY -->
+<section class="py-28 bg-surface-alt">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <p class="font-mono text-xs tracking-[0.25em] uppercase text-brand-600 mb-3">Work In Action</p>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl">What a day on the job looks like</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+
+      <!-- Running Ads mockup -->
+      <div class="card-surface rounded-3xl overflow-hidden hover-lift" data-aos="fade-up">
+        <div class="flex items-center gap-1.5 px-4 py-3 border-b border-line">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-400/70"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-yellow-400/70"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-green-400/70"></span>
+          <span class="ml-2 text-xs font-mono text-mute">Ads Manager</span>
+        </div>
+        <div class="p-5">
+          <p class="text-xs font-mono uppercase text-mute mb-3">Active Campaigns</p>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between bg-brand-500/5 rounded-xl p-3">
+              <div>
+                <p class="text-sm font-semibold">Healthcare — Leads</p>
+                <p class="text-xs text-mute font-mono">Facebook · Instagram</p>
+              </div>
+              <span class="text-[10px] font-mono px-2 py-1 rounded-full bg-brand-500/15 text-brand-600">Active</span>
+            </div>
+            <div class="flex items-center justify-between bg-brand-500/5 rounded-xl p-3">
+              <div>
+                <p class="text-sm font-semibold">Brand Awareness</p>
+                <p class="text-xs text-mute font-mono">TikTok</p>
+              </div>
+              <span class="text-[10px] font-mono px-2 py-1 rounded-full bg-brand-500/15 text-brand-600">Active</span>
+            </div>
+            <div class="flex items-center justify-between bg-brand-500/5 rounded-xl p-3">
+              <div>
+                <p class="text-sm font-semibold">Retargeting — Conversions</p>
+                <p class="text-xs text-mute font-mono">Instagram</p>
+              </div>
+              <span class="text-[10px] font-mono px-2 py-1 rounded-full bg-brand-500/15 text-brand-600">Active</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-3 mt-5">
+            <div><p class="text-[10px] text-mute font-mono uppercase">Spend</p><p class="font-display font-bold text-sm">₦48.2K</p></div>
+            <div><p class="text-[10px] text-mute font-mono uppercase">Results</p><p class="font-display font-bold text-sm">312</p></div>
+            <div><p class="text-[10px] text-mute font-mono uppercase">CPR</p><p class="font-display font-bold text-sm">₦154</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Management mockup -->
+      <div class="card-surface rounded-3xl overflow-hidden hover-lift" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-center gap-3 px-5 py-4 border-b border-line">
+          <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-brand-500 to-emerald-300 flex items-center justify-center text-white text-xs font-bold">SB</span>
+          <div>
+            <p class="text-sm font-semibold">@salambasit.marketing</p>
+            <p class="text-xs text-mute font-mono">Content Calendar · This Week</p>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="grid grid-cols-3 gap-2">
+            <div class="aspect-square rounded-lg bg-brand-500/20 flex items-center justify-center"><i class="fa-solid fa-image text-brand-500"></i></div>
+            <div class="aspect-square rounded-lg bg-brand-500/10 flex items-center justify-center"><i class="fa-solid fa-video text-brand-500"></i></div>
+            <div class="aspect-square rounded-lg bg-brand-500/30 flex items-center justify-center"><i class="fa-solid fa-bullhorn text-brand-500"></i></div>
+            <div class="aspect-square rounded-lg bg-brand-500/10 flex items-center justify-center"><i class="fa-solid fa-comments text-brand-500"></i></div>
+            <div class="aspect-square rounded-lg bg-brand-500/25 flex items-center justify-center"><i class="fa-solid fa-star text-brand-500"></i></div>
+            <div class="aspect-square rounded-lg bg-brand-500/10 flex items-center justify-center"><i class="fa-solid fa-image text-brand-500"></i></div>
+          </div>
+          <div class="flex items-center justify-between mt-5 text-xs font-mono text-mute">
+            <span><i class="fa-solid fa-heart text-brand-500 mr-1"></i>Engagement +38%</span>
+            <span><i class="fa-solid fa-users text-brand-500 mr-1"></i>Followers +1.2K</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Digital Marketing Analytics mockup -->
+      <div class="card-surface rounded-3xl overflow-hidden hover-lift" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center justify-between px-5 py-4 border-b border-line">
+          <p class="text-sm font-semibold">Growth Analytics</p>
+          <span class="text-[10px] font-mono px-2 py-1 rounded-full bg-brand-500/15 text-brand-600">30 days</span>
+        </div>
+        <div class="p-5">
+          <svg viewBox="0 0 240 90" class="w-full h-24">
+            <polyline points="0,70 30,60 60,64 90,42 120,48 150,26 180,32 210,10 240,16"
+              fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="0,70 30,60 60,64 90,42 120,48 150,26 180,32 210,10 240,16 240,90 0,90"
+              fill="#16a34a22" stroke="none"/>
+          </svg>
+          <div class="grid grid-cols-2 gap-3 mt-4">
+            <div class="bg-brand-500/5 rounded-xl p-3">
+              <p class="text-[10px] text-mute font-mono uppercase">Website Traffic</p>
+              <p class="font-display font-bold text-sm text-brand-600">+64%</p>
+            </div>
+            <div class="bg-brand-500/5 rounded-xl p-3">
+              <p class="text-[10px] text-mute font-mono uppercase">Conversion Rate</p>
+              <p class="font-display font-bold text-sm text-brand-600">+27%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
-<section id="services" class="py-28 bg-surface-alt">
+<section id="services" class="py-28">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
       <p class="font-mono text-xs tracking-[0.25em] uppercase text-brand-600 mb-3">Services</p>
@@ -613,7 +736,7 @@
 </section>
 
 <!-- WHY HIRE ME -->
-<section class="py-28">
+<section class="py-28 bg-surface-alt">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
       <p class="font-mono text-xs tracking-[0.25em] uppercase text-brand-600 mb-3">Why Hire Me</p>
@@ -637,7 +760,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-28 bg-surface-alt relative overflow-hidden">
+<section id="contact" class="py-28 relative overflow-hidden">
   <div class="absolute inset-0 grad-ring noise"></div>
   <div class="max-w-6xl mx-auto px-6 relative z-10">
     <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
@@ -689,9 +812,14 @@
           <label class="text-xs font-mono uppercase text-mute mb-2 block">Message</label>
           <textarea required name="message" rows="5" placeholder="Tell me about your project or campaign goals..." class="w-full rounded-xl border border-line px-4 py-3 text-sm outline-none focus:border-brand-500 transition-colors resize-none"></textarea>
         </div>
-        <button type="submit" class="btn-primary text-white font-semibold px-7 py-3.5 rounded-full w-full sm:w-auto inline-flex items-center justify-center gap-2">
-          Send Message <i class="fa-solid fa-paper-plane text-sm"></i>
-        </button>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button type="submit" data-via="email" class="btn-primary text-white font-semibold px-7 py-3.5 rounded-full w-full sm:w-auto inline-flex items-center justify-center gap-2">
+            Send via Email <i class="fa-solid fa-envelope text-sm"></i>
+          </button>
+          <button type="button" data-via="whatsapp" class="btn-ghost card-surface border border-line font-semibold px-7 py-3.5 rounded-full w-full sm:w-auto inline-flex items-center justify-center gap-2">
+            Send via WhatsApp <i class="fa-brands fa-whatsapp text-sm text-brand-500"></i>
+          </button>
+        </div>
         <p id="formStatus" class="text-xs text-mute"></p>
       </form>
     </div>
@@ -814,15 +942,37 @@
 
   document.querySelectorAll('section').forEach(sec => io.observe(sec));
 
-  // Contact form -> mailto
-  document.getElementById('contactForm').addEventListener('submit', function(e){
+  // Contact form -> Email or WhatsApp
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+
+  function getFormValues(){
+    const data = new FormData(contactForm);
+    return { name: (data.get('name')||'').trim(), email: (data.get('email')||'').trim(), message: (data.get('message')||'').trim() };
+  }
+
+  function sendVia(via){
+    if (!contactForm.reportValidity()) return;
+    const { name, email, message } = getFormValues();
+    if (via === 'email'){
+      const subject = encodeURIComponent('Portfolio Inquiry from ' + name);
+      const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+      window.location.href = `mailto:salambasitdayo2019@gmail.com?subject=${subject}&body=${body}`;
+      formStatus.textContent = 'Opening your email app to send this message to salambasitdayo2019@gmail.com…';
+    } else if (via === 'whatsapp'){
+      const text = encodeURIComponent(`Hi Salam, I'm ${name} (${email}).\n\n${message}`);
+      window.open(`https://wa.me/2348080080561?text=${text}`, '_blank');
+      formStatus.textContent = 'Opening WhatsApp to send this message…';
+    }
+  }
+
+  contactForm.addEventListener('submit', function(e){
     e.preventDefault();
-    const data = new FormData(this);
-    const name = data.get('name'), email = data.get('email'), message = data.get('message');
-    const subject = encodeURIComponent('Portfolio Inquiry from ' + name);
-    const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
-    window.location.href = `mailto:salambasitdayo2019@gmail.com?subject=${subject}&body=${body}`;
-    document.getElementById('formStatus').textContent = 'Opening your email app to send this message…';
+    sendVia('email');
+  });
+
+  contactForm.querySelector('[data-via="whatsapp"]').addEventListener('click', function(){
+    sendVia('whatsapp');
   });
 
   // Smooth scroll offset for sticky nav
