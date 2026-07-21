@@ -10,6 +10,10 @@
 <meta property="og:description" content="Strategic paid advertising, social media management and performance-driven digital marketing." />
 <meta property="og:type" content="website" />
 
+<!-- Favicon -->
+<link rel="icon" type="image/jpeg" href="assets/profile.jpg">
+<link rel="apple-touch-icon" href="assets/profile.jpg">
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -456,17 +460,19 @@
         <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Microsoft Office</span>
         <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">CRM Software</span>
       </div>
-      <div class="tab-panel hidden flex-wrap justify-center gap-3" data-panel="webdev">
-        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">HTML5</span>
-        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">CSS3 / Tailwind CSS</span>
-        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">JavaScript Basics</span>
-        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Front-End Development</span>
-        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Back-End Basics</span>
-        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Responsive Web Design</span>
-        <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Git &amp; GitHub</span>
+      <div class="tab-panel hidden flex-col items-center gap-4" data-panel="webdev">
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">HTML5</span>
+          <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">CSS3 / Tailwind CSS</span>
+          <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">JavaScript Basics</span>
+          <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Front-End Development</span>
+          <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Back-End Basics</span>
+          <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Responsive Web Design</span>
+          <span class="pill card-surface border border-line rounded-full px-4 py-2 text-sm">Git &amp; GitHub</span>
+        </div>
+        <p class="text-center text-xs text-mute font-mono">Currently building on this as an entry-level web developer — HTML, front-end &amp; back-end fundamentals.</p>
       </div>
     </div>
-    <p class="text-center text-xs text-mute font-mono mt-6" data-aos="fade-up">Currently building on this as an entry-level web developer — HTML, front-end &amp; back-end fundamentals.</p>
   </div>
 </section>
 
@@ -809,6 +815,10 @@
           <input required type="email" name="email" placeholder="you@company.com" class="w-full rounded-xl border border-line px-4 py-3 text-sm outline-none focus:border-brand-500 transition-colors" />
         </div>
         <div>
+          <label class="text-xs font-mono uppercase text-mute mb-2 block">Phone Number <span class="text-mute font-normal normal-case">(optional)</span></label>
+          <input type="tel" name="phone" placeholder="+234 800 000 0000" class="w-full rounded-xl border border-line px-4 py-3 text-sm outline-none focus:border-brand-500 transition-colors" />
+        </div>
+        <div>
           <label class="text-xs font-mono uppercase text-mute mb-2 block">Message</label>
           <textarea required name="message" rows="5" placeholder="Tell me about your project or campaign goals..." class="w-full rounded-xl border border-line px-4 py-3 text-sm outline-none focus:border-brand-500 transition-colors resize-none"></textarea>
         </div>
@@ -948,19 +958,25 @@
 
   function getFormValues(){
     const data = new FormData(contactForm);
-    return { name: (data.get('name')||'').trim(), email: (data.get('email')||'').trim(), message: (data.get('message')||'').trim() };
+    return {
+      name: (data.get('name')||'').trim(),
+      email: (data.get('email')||'').trim(),
+      phone: (data.get('phone')||'').trim(),
+      message: (data.get('message')||'').trim()
+    };
   }
 
   function sendVia(via){
     if (!contactForm.reportValidity()) return;
-    const { name, email, message } = getFormValues();
+    const { name, email, phone, message } = getFormValues();
+    const phoneLine = phone ? `\nPhone: ${phone}` : '';
     if (via === 'email'){
       const subject = encodeURIComponent('Portfolio Inquiry from ' + name);
-      const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+      const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')' + phoneLine);
       window.location.href = `mailto:salambasitdayo2019@gmail.com?subject=${subject}&body=${body}`;
       formStatus.textContent = 'Opening your email app to send this message to salambasitdayo2019@gmail.com…';
     } else if (via === 'whatsapp'){
-      const text = encodeURIComponent(`Hi Salam, I'm ${name} (${email}).\n\n${message}`);
+      const text = encodeURIComponent(`Hi Salam, I'm ${name} (${email})${phoneLine}.\n\n${message}`);
       window.open(`https://wa.me/2348080080561?text=${text}`, '_blank');
       formStatus.textContent = 'Opening WhatsApp to send this message…';
     }
