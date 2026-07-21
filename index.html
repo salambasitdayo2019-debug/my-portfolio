@@ -795,12 +795,10 @@
           </div>
 
           <div class="flex gap-3 mt-6">
-            <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full card-surface flex items-center justify-center hover-lift"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full card-surface flex items-center justify-center hover-lift"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full card-surface flex items-center justify-center hover-lift"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="X" class="w-10 h-10 rounded-full card-surface flex items-center justify-center hover-lift"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" aria-label="TikTok" class="w-10 h-10 rounded-full card-surface flex items-center justify-center hover-lift"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#" aria-label="GitHub" class="w-10 h-10 rounded-full card-surface flex items-center justify-center hover-lift"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/salam-basit-88271237a/" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-10 h-10 rounded-full card-surface flex items-center justify-center hover-lift"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://web.facebook.com/themmie.dahyo" target="_blank" rel="noopener" aria-label="Facebook" class="w-10 h-10 rounded-full card-surface flex items-center justify-center hover-lift"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com/callmebashrc" target="_blank" rel="noopener" aria-label="X" class="w-10 h-10 rounded-full card-surface flex items-center justify-center hover-lift"><i class="fa-brands fa-x-twitter"></i></a>
+            <button type="button" data-discord="bash039630" aria-label="Discord: bash039630" title="Discord: bash039630" class="discord-btn w-10 h-10 rounded-full card-surface flex items-center justify-center hover-lift relative"><i class="fa-brands fa-discord"></i></button>
           </div>
         </div>
       </div>
@@ -844,12 +842,10 @@
       <p class="text-xs text-mute mt-1">Media Buyer | Social Media Manager | Digital Marketer</p>
     </div>
     <div class="flex gap-3">
-      <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full card-surface flex items-center justify-center hover-lift text-sm"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full card-surface flex items-center justify-center hover-lift text-sm"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full card-surface flex items-center justify-center hover-lift text-sm"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" aria-label="X" class="w-9 h-9 rounded-full card-surface flex items-center justify-center hover-lift text-sm"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="#" aria-label="TikTok" class="w-9 h-9 rounded-full card-surface flex items-center justify-center hover-lift text-sm"><i class="fa-brands fa-tiktok"></i></a>
-      <a href="#" aria-label="GitHub" class="w-9 h-9 rounded-full card-surface flex items-center justify-center hover-lift text-sm"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/salam-basit-88271237a/" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-9 h-9 rounded-full card-surface flex items-center justify-center hover-lift text-sm"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://web.facebook.com/themmie.dahyo" target="_blank" rel="noopener" aria-label="Facebook" class="w-9 h-9 rounded-full card-surface flex items-center justify-center hover-lift text-sm"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://x.com/callmebashrc" target="_blank" rel="noopener" aria-label="X" class="w-9 h-9 rounded-full card-surface flex items-center justify-center hover-lift text-sm"><i class="fa-brands fa-x-twitter"></i></a>
+      <button type="button" data-discord="bash039630" aria-label="Discord: bash039630" title="Discord: bash039630" class="discord-btn w-9 h-9 rounded-full card-surface flex items-center justify-center hover-lift text-sm relative"><i class="fa-brands fa-discord"></i></button>
     </div>
   </div>
   <p class="text-center text-xs text-mute mt-8 font-mono">© 2026 Salam Basit Temidayo. All Rights Reserved.</p>
@@ -951,6 +947,23 @@
   }, { threshold: 0.3 });
 
   document.querySelectorAll('section').forEach(sec => io.observe(sec));
+
+  // Discord buttons -> copy username (Discord has no public profile-by-username URL)
+  document.querySelectorAll('.discord-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const username = btn.dataset.discord;
+      try {
+        await navigator.clipboard.writeText(username);
+      } catch (e) { /* clipboard unavailable, tooltip still shows username */ }
+      const original = btn.getAttribute('title');
+      btn.setAttribute('title', 'Copied: ' + username);
+      const tip = document.createElement('span');
+      tip.textContent = 'Copied "' + username + '"';
+      tip.className = 'absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-mono px-2 py-1 rounded-md bg-brand-500 text-white shadow-md';
+      btn.appendChild(tip);
+      setTimeout(() => { tip.remove(); btn.setAttribute('title', original); }, 1600);
+    });
+  });
 
   // Contact form -> Email or WhatsApp
   const contactForm = document.getElementById('contactForm');
